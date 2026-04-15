@@ -1,66 +1,267 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📦 Invenstore: Backend System (Laravel API)
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Backend-Laravel%2011-red?style=for-the-badge&logo=laravel" />
+  <img src="https://img.shields.io/badge/Language-PHP%208.2-blue?style=for-the-badge&logo=php" />
+  <img src="https://img.shields.io/badge/Frontend-Flutter%203.x-02569B?style=for-the-badge&logo=flutter" />
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Robust Backend for Warehouse Management System</strong><br>
+  Damascus University – Faculty of Informatics Engineering - Project 1<br>
+  <em>Final Grade: 98%</em>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📖 Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Invenstore Backend** is the core engine of the Warehouse Management System, built using **Laravel 11** to deliver a secure, scalable, and high-performance RESTful API.
 
-## Learning Laravel
+It is designed to handle:
+- Complex logistics operations
+- Multi-user role management
+- Real-time system updates
+- Scalable and maintainable architecture
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+> 🎯 The project focuses on clean architecture and efficient API design for both Web and Mobile platforms.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🎯 Core Responsibilities (Backend Scope)
 
-## Laravel Sponsors
+### 1. Inventory & Warehouse Engine
+- Manage inventory with multiple states (valid, expired, damaged)
+- Support multiple warehouses and distribution centers
+- Automatic low-stock alerts
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 2. Logistics Operations System
+- Warehouse-to-warehouse transfers
+- Distribution center operations
+- Full order lifecycle tracking
 
-### Premium Partners
+### 3. User & Access Control
+- Authentication system (Login / Register / OTP)
+- Role-Based Access Control (RBAC) using Spatie
+- User banning/unbanning system
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 4. Reporting & Data Layer
+- Orders and products reports
+- Export reports to PDF and Excel
+- Dashboard analytics endpoints
 
-## Contributing
+### 5. Real-time Communication
+- Live updates via Pusher
+- Notifications for:
+  - Low stock
+  - Expiration alerts
+  - Order status updates
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## ⚙️ Functional Modules (Implemented)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- ✅ User & Role Management  
+- ✅ Warehouse Management  
+- ✅ Distribution Centers Management  
+- ✅ Products & Categories Management  
+- ✅ Manufacturers & Suppliers Management  
+- ✅ Orders & Transfers Management  
+- ✅ Product Destruction Management  
+- ✅ Reporting & Analytics  
+- ✅ Real-time Notifications  
+- ✅ Authentication & Verification (OTP + Email)  
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔒 Non-Functional Highlights
 
-## License
+### Security
+- Laravel Sanctum Authentication
+- Spatie Permission (RBAC)
+- Protection against common vulnerabilities (XSS, CSRF, SQL Injection)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Performance
+- Optimized database queries with Eloquent ORM
+- Advanced filtering and pagination
+- Efficient handling of large datasets
+
+### Scalability
+- Modular architecture design
+- Ready for horizontal scaling
+- Easy feature extension without major refactoring
+
+### Maintainability
+- Clean and structured codebase
+- Separation of Concerns
+- Organized layers (Controllers, Services, Repositories)
+
+---
+
+## 📄 Documentation
+
+- For a detailed explanation of the system design, architecture, and requirements: 📂 [Project Report](./report%20of%20project%201%20-%20final.pdf)
+
+
+- Postman Collection: [Dentila.postman_collection.json](WMS.postman_collection.json)
+
+---
+
+## 🏗️ Backend Architecture
+
+```bash
+app/
+├── Http/
+│   ├── Controllers/     # API Controllers
+│   ├── Requests/        # Validation
+│   └── Resources/       # API Transformers
+│
+├── Models/              # Eloquent Models
+├── Services/            # Business Logic
+├── Repositories/        # Data Access Layer
+├── Events/              # Broadcasting Events
+├── Notifications/       # System Notifications
+├── Policies/            # Authorization Logic
+│
+routes/
+├── api.php              # API Routes
+│
+database/
+├── migrations/
+├── seeders/
+```
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology           | Version    | Purpose                 |
+| -------------------- | ---------- | ----------------------- |
+| Laravel              | 11         | Backend Framework       |
+| PHP                  | 8.2+       | Core Language           |
+| MySQL                | 5.7+ / 8.x | Database                |
+| Laravel Sanctum      | -          | API Authentication      |
+| Spatie Permission    | -          | Roles & Permissions     |
+| Spatie Query Builder | -          | Advanced Filtering      |
+| Pusher               | -          | Real-time Notifications |
+| Eloquent ORM         | -          | Database ORM            |
+
+---
+
+## ⛓️ Runtime Environment Requirements
+
+To run the project, you need:
+
+- PHP >= 8.2  
+- Composer >= 2.x  
+- MySQL >= 5.7 or 8.x  
+- Node.js >= 18 (optional for assets)  
+- npm or yarn  
+
+### Required PHP Extensions:
+- OpenSSL  
+- PDO  
+- Mbstring  
+- Tokenizer  
+- XML  
+- Ctype  
+- JSON  
+- BCMath  
+- Fileinfo  
+
+---
+
+## 🚀 How to Run the Backend
+
+### 1. Clone the Repository
+```bash
+git clone <repository-link>
+cd invenstore-backend
+```
+
+### 2. Install Dependencies
+```bash
+composer install
+```
+
+### 3. Setup Environment File
+```bash
+cp .env.example .env
+```
+
+### 4. Generate Application Key
+```bash
+php artisan key:generate
+```
+
+### 5. Configure Database
+Edit `.env` file:
+
+```env
+DB_DATABASE=your_database
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
+
+### 6. Run Migrations & Seeders
+```bash
+php artisan migrate --seed
+```
+
+### 7. Install Frontend Assets (Optional)
+```bash
+npm install
+npm run build
+```
+
+### 8. Start Development Server
+```bash
+php artisan serve
+```
+
+---
+
+## 🌐 API Base URL
+
+```
+http://127.0.0.1:8000/api
+```
+
+---
+
+## 📊 Project Metrics
+
+- 🎓 Final Grade: **98%**  
+- 🔗 50+ REST API Endpoints  
+- 🧩 15+ Modules Implemented  
+- 💻 10,000+ Lines of Code  
+
+---
+
+## 👥 Development Team
+
+- Mohamad Anas Albalah - Backend
+- Mohammad Hosny Wees - Backend
+- Leen Rabbou - Frontend
+- Yaman Assi - Frontend
+
+**Supervised by:** Eng. Najma Islam Majed Al-Tair  
+
+---
+
+## 🙏 Acknowledgment
+
+Special thanks to:
+- Damascus University  
+- Faculty of Informatics Engineering  
+- Eng. Najma Al-Tair  
+- All instructors and mentors  
+
+---
+
+<div align="center">
+
+Built with ❤️ using Laravel  
+Invenstore Backend System – 2024
+
+</div>

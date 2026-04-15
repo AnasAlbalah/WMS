@@ -17,14 +17,14 @@ class RolesPermissionsSeeder extends Seeder
     public function run(): void
     {
         // Create roles
-        // $adminRole = Role::create(['name' => 'admin', 'type' => 'Admin']);
-        // $warehouseManagerRole = Role::create(['name' => 'warehouse manager', 'type' => 'Warehouse']);
+        $adminRole = Role::create(['name' => 'admin', 'type' => 'Admin']);
+        $warehouseManagerRole = Role::create(['name' => 'warehouse manager', 'type' => 'Warehouse']);
         // $assistantManagerRole = Role::create(['name' => 'assistant manager', 'type' => 'Warehouse']);
-        // $distributionAgentRole = Role::create(['name' => 'distribution agent', 'type' => 'DistributionCenter']);
+        $distributionAgentRole = Role::create(['name' => 'distribution agent', 'type' => 'DistributionCenter']);
 
-        $adminRole = Role::findByName('admin');
-        $warehouseManagerRole = Role::findByName('warehouse manager');
-        $distributionAgentRole = Role::findByName('distribution agent');
+        // $adminRole = Role::findByName('admin');
+        // $warehouseManagerRole = Role::findByName('warehouse manager');
+        // $distributionAgentRole = Role::findByName('distribution agent');
 
 
         // Define permissions
@@ -98,16 +98,16 @@ class RolesPermissionsSeeder extends Seeder
         //////////////////////////////////////////////////////////////
 
         // Create users and assign roles
-        // $adminUser = User::factory()->create([
-        //     'name' => 'admin',
-        //     'email' => 'admin@example.com',
-        //     'password' => bcrypt('password'),
-        // ]);
-        // $adminUser->assignRole($adminRole);
+        $adminUser = User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@example.com',
+            'password' => bcrypt('password'),
+        ]);
+        $adminUser->assignRole($adminRole);
 
         // // Assign permission associated with the role to the user
-        // $permissions = $adminRole->permissions()->pluck('name')->toArray();
-        // $adminUser->givePermissionTo($permissions);
+        $permissions = $adminRole->permissions()->pluck('name')->toArray();
+        $adminUser->givePermissionTo($permissions);
 
         //////////////////////////////////////////////////////////////
 

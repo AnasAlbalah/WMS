@@ -44,7 +44,7 @@ class SubCategorySeeder extends Seeder
                         'name_ar' => 'رز',
                         'name_en' => 'Rice'
                     ],
-                    
+
                 ]
             ],
             [
@@ -61,9 +61,9 @@ class SubCategorySeeder extends Seeder
                         'name_ar' => 'عناية بالبشرة',
                         'name_en' => 'Skin Crae'
                     ],
-                   
+
                 ]
             ],
-        ]
+        ];
     }
 }
